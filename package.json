@@ -1,0 +1,23 @@
+{
+  "name": "makemehapi",
+  "version": "1.0.0",
+  "description": "Makemehapi hapi self learned tutorial from nodeschool.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjhamilton4/makemehapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjhamilton4/makemehapi/issues"
+  },
+  "homepage": "https://github.com/pjhamilton4/makemehapi#readme",
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "hapi": "^18.1.0"
+  }
+}
