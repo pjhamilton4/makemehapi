@@ -1,7 +1,7 @@
 const Hapi = require('@hapi/hapi');
-const fs = require('fs');
 const Path = require('path');
-const Rot13 = require('rot13-transform');
+const joi = require("@hapi/joi")
+
 
 const init = async () => {
 
@@ -10,16 +10,24 @@ const init = async () => {
         port: Number(process.argv[2] || 8080)
     });
 
+
     server.route({
+        path: '/chickens/{breed}',
         method: 'GET',
-        path: '/',
-        handler: (request, h) => {
-            const thisfile = fs.createReadStream(Path.join(__dirname, 'input.txt'));
-            return thisfile.pipe(Rot13()); 
+        handler: (req, h) => {
+            return `You asked for the chicken ${req.params.breed}`;
+        },
+        options: {
+            validate: {
+                params: joi.object({
+                    breed: joi.string().required()
+                })
+            }
         }
     });
 
     await server.start();
+
     console.log('Server running on %s', server.info.uri);
 }
 
