@@ -22,7 +22,7 @@
     "@hapi/hapi": "^19.1.1",
     "@hapi/inert": "^6.0.1",
     "h2o2": "^8.2.0",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "hapi": "^18.1.0",
     "joi": "^14.3.1",
     "rot13-transform": "^1.0.0",
